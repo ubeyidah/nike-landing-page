@@ -18,7 +18,7 @@ const Hero = () => {
         </p>
 
         <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
-          <span className="xl:bg-white whitespace-nowrap relative z-10 pr-10">
+          <span className="xl:bg-white whitespace-wrap relative z-10 pr-10 xl:whitespace-nowrap">
             The New Arrival
           </span>
           <br />
@@ -35,7 +35,7 @@ const Hero = () => {
 
         <div className="flex items-start justify-start flex-wrap w-full mt-20 gap-12 ">
           {statistics.map((item) => (
-            <div key={item.label}>
+            <div key={crypto.randomUUID()}>
               <p className="text-3xl font-palanquin font-bold mb-0">
                 {item.value}
               </p>
@@ -58,7 +58,7 @@ const Hero = () => {
 
         <div className="flex sm:gap-6 gap-4 absolute -bottom-[6%] sm:left-[10%] max-sm:px-6">
           {shoes.map((shoe) => (
-            <div key={shoe}>
+            <div key={crypto.randomUUID()}>
               <ShoeCard
                 imgURL={shoe}
                 changeShoesImage={(shoe) => setBigShoeImg(shoe)}
